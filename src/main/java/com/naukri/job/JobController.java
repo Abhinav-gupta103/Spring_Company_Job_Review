@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.naukri.company.Company;
-
 @RestController
 @RequestMapping("/jobs")
 public class JobController {
@@ -28,7 +26,6 @@ public class JobController {
     @PostMapping()
     public Job addJob(@RequestBody Job job) {
         System.out.println(job);
-        Company c = job.getCompany();
         return this.jobService.addJob(job);
     }
 
