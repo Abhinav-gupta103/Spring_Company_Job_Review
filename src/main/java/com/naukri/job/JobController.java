@@ -25,7 +25,6 @@ public class JobController {
 
     @PostMapping()
     public Job addJob(@RequestBody Job job) {
-        System.out.println(job);
         return this.jobService.addJob(job);
     }
 
